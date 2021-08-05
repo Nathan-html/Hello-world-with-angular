@@ -7,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
+  title:string = "Drive-X";
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+
 }

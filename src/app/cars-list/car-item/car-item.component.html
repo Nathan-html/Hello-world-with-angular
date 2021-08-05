@@ -1,0 +1,15 @@
+<div class="card text-center shadow" *ngIf="car.name ! NULL ">
+    <div class="card-header bg-dark text-white ">
+        <h2 class="card-title">{{car.name | titlecase }}</h2>
+    </div>
+    <div class="card-body">
+        <img [src]="car.coverImage" class="img-fluid" alt="photo {{car.name}}">
+        <hr>
+        <p *ngIf="car.pays ! NULL">Origine: {{car.pays | uppercase }}</p>
+        <p *ngIf="car.power != null OR car.power > 0 " [ngClass]="{'badge' : true, 'badge-info' : car.power < 1000, 'badge-warning' : car.power > 1000 }">Puissance: {{car.power}} CH</p>
+        <p *ngIf="car.perf != null OR car.perf > 0 ">0 à 100 km/h: {{car.perf}} sec </p>
+        <p>{{bookingMessage}}</p>
+        <button class="btn btn-primary" (click)="onBooking()" [disabled]="isBooked">Réserver</button>
+    </div>
+</div>
+<hr>
