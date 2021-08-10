@@ -6,17 +6,17 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./car-item.component.css']
 })
 export class CarItemComponent implements OnInit {
+  
+  constructor() { }
+
+  ngOnInit() {
+  }
 
   @Input() car:any;
 
   isBooked:boolean = false;
   
   bookingMessage: string = "Réserver maintenant !";
-  
-  constructor() { }
-
-  ngOnInit() {
-  }
 
   onBooking(){
     this.isBooked= true;

@@ -5,7 +5,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './cars-list.component.html',
   styleUrls: ['./cars-list.component.css']
 })
+
 export class CarsListComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+    this.carUpdate = new Date();
+  }
 
   carUpdate:any ;
 
@@ -54,11 +61,4 @@ export class CarsListComponent implements OnInit {
       perf: 2.5
     }
   ];
-
-  constructor() { }
-
-  ngOnInit() {
-    this.carUpdate = new Date();
-  }
-
 }

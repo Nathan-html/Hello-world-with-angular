@@ -1,0 +1,27 @@
+<div class="card text-center border" *ngIf="driver.fullName ! NULL"
+    [ngClass]="{
+        'border-danger': driver.likeIts < 0,
+        'border-success': driver.likeIts > 0
+    }">
+    <div class="card-header bg-dark text-white ">
+        <h2 class="card-title">{{driver.fullName | titlecase }}</h2>
+    </div>
+    <div class="card-body custom-size">
+        <img [src]="driver.coverImage" class="img-fluid w-100" alt="photo {{driver.name}}">
+        <hr>
+        <p *ngIf="driver.pays ! NULL">Origine: {{driver.pays | uppercase }}</p>
+        <p *ngIf="!driver.pays">Origine: NC</p>
+        <p>discipline : <span class="badge" [ngClass]="{
+            'badge-success' : driver.category == 'gymkhana',
+            'badge-primary' : driver.category == 'nascar',
+            'badge-info' : driver.category == 'rallye',
+            'badge-warning' : driver.category == 'formule 1',
+            'badge-danger' : driver.category == 'drag'}">{{driver.category}}</span>
+        </p>
+        <div class="row justify-content-center">
+            <button (click)='onLike()' class='btn btn-success mx-2'><i class="fas fa-thumbs-up"></i></button>
+            <button (click)='onDislike()' class='btn btn-danger'><i class="fas fa-thumbs-down"></i></button>
+        </div>
+    </div>
+</div>
+<hr>
