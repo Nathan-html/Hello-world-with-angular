@@ -7,6 +7,7 @@ import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 registerLocaleData(localeFr, 'fr');
 
+import { DataService } from './services/data.service';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -17,7 +18,9 @@ import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { CarItemComponent } from './cars-list/car-item/car-item.component';
 import { FormsModule } from '@angular/forms';
 import { DriverItemComponent } from './drivers-list/driver-item/driver-item.component';
-import { DataService } from './services/data.service';
+import { FooterComponent } from './footer/footer.component';
+import { BestDriversComponent } from './home-page/best-drivers/best-drivers.component';
+import { BestCarsComponent } from './home-page/best-cars/best-cars.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { DataService } from './services/data.service';
     HomePageComponent,
     FourOhFourComponent,
     CarItemComponent,
-    DriverItemComponent
+    DriverItemComponent,
+    FooterComponent,
+    BestDriversComponent,
+    BestCarsComponent,
   ],
   imports: [
     BrowserModule,
