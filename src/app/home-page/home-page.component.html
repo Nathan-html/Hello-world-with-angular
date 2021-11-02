@@ -7,3 +7,6 @@
       <a class="btn btn-primary btn-lg" routerLink="cars" role="button">eXotic Cars</a>
     </p>
 </div>
+<div class="card-deck  justify-content-center">
+  <app-car-item  *ngFor="let oneCar of bestCars" [car]="oneCar" ></app-car-item>
+</div>

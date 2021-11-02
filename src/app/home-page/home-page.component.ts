@@ -11,7 +11,11 @@ export class HomePageComponent implements OnInit {
   constructor(private DataService: DataService) { }
 
   ngOnInit(): void {
+    console.log(this.bestCars);
+    console.log(this.bestDrivers);
   }
 
   title = this.DataService.title;
+  bestCars = this.DataService.getNbBestCars(2);
+  bestDrivers = this.DataService.getNbBestDrivers(3);
 }

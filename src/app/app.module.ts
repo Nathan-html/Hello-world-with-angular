@@ -21,6 +21,8 @@ import { DriverItemComponent } from './drivers-list/driver-item/driver-item.comp
 import { FooterComponent } from './footer/footer.component';
 import { BestDriversComponent } from './home-page/best-drivers/best-drivers.component';
 import { BestCarsComponent } from './home-page/best-cars/best-cars.component';
+import { NewCarComponent } from './new-car/new-car.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { BestCarsComponent } from './home-page/best-cars/best-cars.component';
     FooterComponent,
     BestDriversComponent,
     BestCarsComponent,
+    NewCarComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,

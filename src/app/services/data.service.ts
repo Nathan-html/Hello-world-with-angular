@@ -121,12 +121,12 @@ export class DataService {
   }
   getNbBestCars(nbCars:number){
     let tablSortCars:any = this.tablCars;
-    tablSortCars.sort(tablSortCars.likeIts);
-    tablSortCars.slice(1, nbCars);
+    tablSortCars.sort(tablSortCars.power);
+    return tablSortCars.slice(0, nbCars);
   }
   getNbBestDrivers(nbDrivers:number){
     let tablSortDrivers:any = this.tablDrivers;
     tablSortDrivers.sort(tablSortDrivers.likeIts);
-    tablSortDrivers.slice(1, nbDrivers);
+    return tablSortDrivers.slice(0, nbDrivers);
   }
 }

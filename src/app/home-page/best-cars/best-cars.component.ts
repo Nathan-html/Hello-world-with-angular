@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-best-cars',
@@ -12,4 +12,12 @@ export class BestCarsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  @Input() bestCar:any;
+
+  isBooked:boolean = false;
+  bookingMessage: string = "Réserver maintenant !";
+  onBooking(){
+    this.isBooked= true;
+    this.bookingMessage= "Bonne route ! [réservée]";
+  }
 }
